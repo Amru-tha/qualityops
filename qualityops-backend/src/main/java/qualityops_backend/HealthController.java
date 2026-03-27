@@ -69,4 +69,46 @@ public class HealthController {
 
         return filteredRuns;
     }
+    @GetMapping("/readiness/{projectName}")
+    public Map<String, Object> getReleaseReadiness(@PathVariable String projectName) {
+        Map<String, Object> readiness = new HashMap<>();
+
+        TestRun latestRun = null;
+
+        for (int i = testRuns.size() - 1; i >= 0; i--) {
+            TestRun run = testRuns.get(i);
+            if (run.getProjectName().equalsIgnoreCase(projectName)) {
+                latestRun = run;
+                break;
+            }
+        }
+
+        if (latestRun == null) {
+            readiness.put("projectName", projectName);
+            readiness.put("status", "NO_DATA");
+            readiness.put("message", "No test runs found for this project");
+            return readiness;
+        }
+
+        double passRate = latestRun.getTotalTests() > 0
+            ? ((double) latestRun.getPassed() / latestRun.getTotalTests()) * 100
+            : 0;
+
+        String status;
+        if (passRate >= 95 && latestRun.getFailed() == 0) {
+        status = "READY";
+        } else if (passRate >= 85) {
+            status = "WARNING";
+        } else {
+            status = "NOT_READY";
+        }
+
+        readiness.put("projectName", latestRun.getProjectName());
+        readiness.put("buildNumber", latestRun.getBuildNumber());
+        readiness.put("passRate", passRate);
+        readiness.put("failed", latestRun.getFailed());
+        readiness.put("status", status);
+
+        return readiness;
+    }
 }
