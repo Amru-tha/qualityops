@@ -56,4 +56,17 @@ public class HealthController {
 
         return summary;
     }
+
+    @GetMapping("/testruns/project/{projectName}")
+    public List<TestRun> getTestRunsByProject(@PathVariable String projectName) {
+        List<TestRun> filteredRuns = new ArrayList<>();
+
+        for (TestRun run : testRuns) {
+            if (run.getProjectName().equalsIgnoreCase(projectName)) {
+                filteredRuns.add(run);
+            }
+        }
+
+        return filteredRuns;
+    }
 }
