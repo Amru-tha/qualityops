@@ -1,0 +1,8 @@
+{
+  "projectName": "LoginApp",
+  "buildNumber": "123",
+  "totalTests": 100,
+  "passed": 90,
+  "failed": 5,
+  "skipped": 5
+}

@@ -1,6 +1,16 @@
 package qualityops_backend;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class TestRun {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String projectName;
     private String buildNumber;
@@ -21,21 +31,55 @@ public class TestRun {
         this.skipped = skipped;
     }
 
-    public String getProjectName() { return projectName; }
-    public void setProjectName(String projectName) { this.projectName = projectName; }
+    public Long getId() {
+        return id;
+    }
 
-    public String getBuildNumber() { return buildNumber; }
-    public void setBuildNumber(String buildNumber) { this.buildNumber = buildNumber; }
+    public String getProjectName() {
+        return projectName;
+    }
 
-    public int getTotalTests() { return totalTests; }
-    public void setTotalTests(int totalTests) { this.totalTests = totalTests; }
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
 
-    public int getPassed() { return passed; }
-    public void setPassed(int passed) { this.passed = passed; }
+    public String getBuildNumber() {
+        return buildNumber;
+    }
 
-    public int getFailed() { return failed; }
-    public void setFailed(int failed) { this.failed = failed; }
+    public void setBuildNumber(String buildNumber) {
+        this.buildNumber = buildNumber;
+    }
 
-    public int getSkipped() { return skipped; }
-    public void setSkipped(int skipped) { this.skipped = skipped; }
+    public int getTotalTests() {
+        return totalTests;
+    }
+
+    public void setTotalTests(int totalTests) {
+        this.totalTests = totalTests;
+    }
+
+    public int getPassed() {
+        return passed;
+    }
+
+    public void setPassed(int passed) {
+        this.passed = passed;
+    }
+
+    public int getFailed() {
+        return failed;
+    }
+
+    public void setFailed(int failed) {
+        this.failed = failed;
+    }
+
+    public int getSkipped() {
+        return skipped;
+    }
+
+    public void setSkipped(int skipped) {
+        this.skipped = skipped;
+    }
 }
