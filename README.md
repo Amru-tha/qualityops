@@ -87,6 +87,9 @@ GET
   ]
 }
 ```
+GET /api/health
+GET /api/testruns
+POST /api/testruns/upload
 
 ## Project Goal
 
