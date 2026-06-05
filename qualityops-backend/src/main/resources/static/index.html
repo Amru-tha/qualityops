@@ -175,6 +175,7 @@
     <div class="section">
         <h2>Summary</h2>
         <h3 id="overallStatus"></h3>
+        <p id="lastUpdated" style="color:#6b7280; margin-top:5px;"></p>
 
         <div id="summary" class="summary-grid">
             <p class="loading">Loading summary...</p>
@@ -201,6 +202,7 @@
 
                 const overallStatusEl = document.getElementById('overallStatus');
                 overallStatusEl.innerText = 'Overall Status: ' + data.overallStatus;
+                document.getElementById('lastUpdated').innerText = 'Last Updated: ' + new Date().toLocaleString();
 
                 overallStatusEl.style.background =
                     data.overallStatus === 'HEALTHY' ? '#dcfce7' :
@@ -244,6 +246,7 @@
                         <p><strong>Failed:</strong> ${project.failed}</p>
                         <p><strong>Skipped:</strong> ${project.skipped}</p>
                         <p><strong>Pass Rate:</strong> ${Math.round(project.passRate)}%</p>
+                        <p><strong>Release Ready:</strong> ${project.passRate >= 90 ? 'Yes' : 'No'}</p>
                         <span class="badge ${project.status}">${project.status}</span>
                     </div>
                 `).join('');
@@ -290,7 +293,7 @@
                             },
                             title: {
                                 display: true,
-                                text: 'Project Quality Comparison'
+                                text: 'Project Pass Rate Comparison (%)'
                             },
                             tooltip: {
                                 callbacks: {
@@ -321,6 +324,14 @@
 
         loadDashboard();
     </script>
+    <footer style="
+        text-align:center;
+        padding:20px;
+        margin-top:30px;
+        color:#6b7280;
+        font-size:14px;">
+        QualityOps Dashboard | Built with Java Spring Boot
+    </footer>
 
 </body>
 </html>
