@@ -100,6 +100,14 @@ GET
 ## Project Goal
 
 This project simulates a Quality Engineering dashboard used by QA teams to monitor automated test execution results, analyze project quality trends, and evaluate release readiness before production deployment.
+## Project Highlights
+
+- Developed a full-stack Quality Engineering dashboard using Java Spring Boot
+- Built REST APIs for test report ingestion and dashboard analytics
+- Implemented project health monitoring and release readiness calculations
+- Created interactive charts for quality trend visualization
+- Processed JSON-based automated test execution reports
+- Designed a responsive dashboard interface using HTML, CSS, and JavaScript
 ## Business Value
 
 QualityOps helps QA teams:
@@ -128,6 +136,10 @@ QualityOps helps QA teams:
 - Data Visualization with Chart.js
 - Git and GitHub Version Control
 - Quality Engineering Concepts
+## Repository
+
+GitHub Repository:
+https://github.com/Amru-tha/qualityops
 ## Author
 
 Amrutha Deeti
