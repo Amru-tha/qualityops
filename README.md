@@ -1,9 +1,6 @@
 # QualityOps
 
 QualityOps is a test analytics and release readiness dashboard built using Java, Spring Boot, H2 Database, HTML, CSS, and JavaScript.
-## Architecture Overview
-
-QualityOps follows a layered architecture using Spring Boot. Test execution reports are uploaded in JSON format through REST APIs, processed by the backend services, stored in an H2 database, and displayed through an interactive dashboard. The application calculates project health, pass rates, and release readiness metrics to support quality engineering decisions.
 
 ### Workflow
 
@@ -46,6 +43,25 @@ QualityOps follows a layered architecture using Spring Boot. Test execution repo
 - Chart.js
 - Maven
 - GitHub
+## Architecture Overview
+
+QualityOps follows a layered architecture using Spring Boot. Test execution reports are uploaded in JSON format through REST APIs, processed by the backend services, stored in an H2 database, and displayed through an interactive dashboard. The application calculates project health, pass rates, and release readiness metrics to support quality engineering decisions.
+## Setup Instructions
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Amru-tha/qualityops.git
+## Database
+
+QualityOps uses an embedded H2 database for storing test execution results and project analytics.
+
+Benefits:
+
+- Lightweight
+- No external installation required
+- Fast local development
+- Easy testing and demonstration
 
 ## API Endpoints
 
@@ -107,19 +123,30 @@ GET
   ]
 }
 ```
+## Status Classification Rules
+
+| Pass Rate | Status |
+|------------|----------|
+| 95% and above | HEALTHY |
+| 85% - 94% | WARNING |
+| Below 85% | CRITICAL |
+
+Release readiness is calculated based on project pass rate and quality thresholds.
+## Status Classification Rules
+
+| Pass Rate | Status |
+|------------|----------|
+| 95% and above | HEALTHY |
+| 85% - 94% | WARNING |
+| Below 85% | CRITICAL |
+
+Release readiness is calculated based on project pass rate and quality thresholds.
 
 
 ## Project Goal
 
 This project simulates a Quality Engineering dashboard used by QA teams to monitor automated test execution results, analyze project quality trends, and evaluate release readiness before production deployment.
-## Project Highlights
 
-- Developed a full-stack Quality Engineering dashboard using Java Spring Boot
-- Built REST APIs for test report ingestion and dashboard analytics
-- Implemented project health monitoring and release readiness calculations
-- Created interactive charts for quality trend visualization
-- Processed JSON-based automated test execution reports
-- Designed a responsive dashboard interface using HTML, CSS, and JavaScript
 ## Business Value
 
 QualityOps helps QA teams:
@@ -136,14 +163,14 @@ QualityOps helps QA teams:
 - Designed a dashboard for visualizing quality trends and project health
 - Integrated backend APIs with frontend dashboard components
 - Implemented project status classification using quality thresholds
+## Project Highlights
 
-## Future Enhancements
-
-- User authentication and role management
-- Historical trend analysis
-- Email notifications for failed builds
-- CI/CD integration with Jenkins and GitHub Actions
-- Export dashboard reports to PDF
+- Developed a full-stack Quality Engineering dashboard using Java Spring Boot
+- Built REST APIs for test report ingestion and dashboard analytics
+- Implemented project health monitoring and release readiness calculations
+- Created interactive charts for quality trend visualization
+- Processed JSON-based automated test execution reports
+- Designed a responsive dashboard interface using HTML, CSS, and JavaScript
 ## Key Skills Demonstrated
 
 - Java Programming
@@ -156,6 +183,26 @@ QualityOps helps QA teams:
 - Data Visualization with Chart.js
 - Git and GitHub Version Control
 - Quality Engineering Concepts
+## Lessons Learned
+
+Through this project, I gained hands-on experience with:
+
+- Building REST APIs using Spring Boot
+- Processing JSON data
+- Creating dashboards using HTML, CSS, and JavaScript
+- Visualizing data using Chart.js
+- Working with H2 databases
+- Managing source code using Git and GitHub
+- Applying Quality Engineering concepts to software projects
+
+## Future Enhancements
+
+- User authentication and role management
+- Historical trend analysis
+- Email notifications for failed builds
+- CI/CD integration with Jenkins and GitHub Actions
+- Export dashboard reports to PDF
+
 ## Repository
 
 GitHub Repository:
