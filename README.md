@@ -15,10 +15,10 @@ QualityOps is a test analytics and release readiness dashboard built using Java,
 https://qualityops.onrender.com
 
 ### Dashboard Overview
-![Dashboard](screenshots/dashboard-overview.png)
+![Dashboard Summary](qualityops-backend/screenshots/dashboard-summary.png)
 
 ### Project Health Monitoring
-![Projects](screenshots/projects-section.png)
+![Project Health](qualityops-backend/screenshots/project-health.png)
 
 
 ## Features
