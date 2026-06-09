@@ -18,7 +18,7 @@ https://qualityops.onrender.com
 ![Dashboard Summary](qualityops-backend/screenshots/dashboard-overview.png)
 
 ### Project Health Monitoring
-![Project Health](qualityops-backend/screenshots/project-section.png)
+![Project Health](qualityops-backend/screenshots/projects-section.png)
 
 
 ## Features
