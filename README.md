@@ -45,6 +45,10 @@ https://qualityops.onrender.com
 - Chart.js
 - Maven
 - GitHub
+- Tech Stack
+- Thymeleaf
+- Docker
+- Render
 ## Architecture Overview
 
 QualityOps follows a layered architecture using Spring Boot. Test execution reports are uploaded in JSON format through REST APIs, processed by the backend services, stored in an H2 database, and displayed through an interactive dashboard. The application calculates project health, pass rates, and release readiness metrics to support quality engineering decisions.
