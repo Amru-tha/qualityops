@@ -1,6 +1,5 @@
 # QualityOps
-
-QualityOps is a test analytics and release readiness dashboard built using Java, Spring Boot, H2 Database, HTML, CSS, and JavaScript.
+QualityOps is a Spring Boot based QA analytics dashboard that tracks automated test execution results, calculates pass rates, displays project health status, and allows new test runs to be submitted through a web interface.
 
 ### Workflow
 
@@ -14,11 +13,17 @@ QualityOps is a test analytics and release readiness dashboard built using Java,
 
 https://qualityops.onrender.com
 
-### Dashboard Overview
-![Dashboard Summary](qualityops-backend/screenshots/dashboard-overview.png)
+## Dashboard Overview
 
-### Project Health Monitoring
-![Project Health](qualityops-backend/screenshots/projects-section.png)
+![Dashboard Summary](screenshots/dashboard-summary.png)
+
+## Project Pass Rate Analysis
+
+![Pass Rate Chart](screenshots/pass-rate-chart.png)
+
+## Test Run Submission & Project Health
+
+![Project Health](screenshots/project-health.png)
 
 
 ## Features
