@@ -15,15 +15,15 @@ https://qualityops.onrender.com
 
 ## Dashboard Overview
 
-![Dashboard Summary](screenshots/dashboard-summary.png)
+![Dashboard Summary](qualityops-backend/screenshots/dashboard-summary.png)
 
 ## Project Pass Rate Analysis
 
-![Pass Rate Chart](screenshots/pass-rate-chart.png)
+![Pass Rate Chart](qualityops-backend/screenshots/pass-rate-chart.png)
 
 ## Test Run Submission & Project Health
 
-![Project Health](screenshots/project-health.png)
+![Project Health](qualityops-backend/screenshots/project-health.png)
 
 
 ## Features
