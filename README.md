@@ -13,6 +13,8 @@ QualityOps is a Spring Boot based QA analytics dashboard that tracks automated t
 
 https://qualityops.onrender.com
 
+Note: The live demo uses sample dashboard data for demonstration. User-submitted test runs may reset when the free Render instance restarts.
+
 ## Dashboard Overview
 
 ![Dashboard Summary](qualityops-backend/screenshots/dashboard-summary.png)
